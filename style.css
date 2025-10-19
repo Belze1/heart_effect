@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  background: black;
+  display: flex;
+  height: 100vh;
+  color: white;
+  font-family: monospace;
+}
+
+.left, .right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ascii-art {
+  white-space: pre;
+  font-size: 8px; /* chỉnh lớn nhỏ tuỳ ảnh */
+  line-height: 8px;
+}
+
+.ascii-art span {
+  display: block;
+  transform: translateY(-6px);
+  opacity: 0;
+  animation: lineIn .5s ease-out forwards;
+}
+
+@keyframes lineIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
